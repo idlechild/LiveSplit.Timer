@@ -236,7 +236,7 @@ namespace LiveSplit.UI.Components
         public virtual TimeSpan? GetTime(LiveSplitState state, TimingMethod method)
         {
             if (state.CurrentPhase == TimerPhase.NotRunning)
-                return state.Run.Offset;
+                return TimeSpan.Zero;
             else
                 return state.CurrentTime[method];
         }
